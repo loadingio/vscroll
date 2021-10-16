@@ -1,0 +1,24 @@
+{
+  "name": "portal",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx server -r web -o true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zbryikt/template": "^2.3.22",
+    "clusterize.js": "^0.18.1",
+    "fedep": "0.0.16",
+    "ldview": "^0.2.3"
+  },
+  "frontendDependencies": {
+    "root": "web/static/assets/lib",
+    "modules": [
+      "ldview"
+    ]
+  }
+}
