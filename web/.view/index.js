@@ -6,7 +6,7 @@ function pug_rethrow(e,n,r,t){if(!(e instanceof Error))throw e;if(!("undefined"=
 function pug_style(r){if(!r)return"";if("object"==typeof r){var t="";for(var e in r)pug_has_own_property.call(r,e)&&(t=t+e+":"+r[e]+";");return t}return r+""}function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;
     var locals_for_with = (locals || {});
     
-    (function (Math, h, idx) {
+    (function (Math, h, idx, w) {
       ;pug_debug_line = 1;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
@@ -20,42 +20,48 @@ var idx = 0;
 ;pug_debug_line = 6;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 var h = 0;
 ;pug_debug_line = 7;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv id=\"content\" style=\"padding:3px;margin:auto;width:480px;height:400px;border:1px solid #ccc;box-shadow:0 3px 3px rgba(0,0,0,.2);border-radius:.25em;overflow:scroll;display:flex;flex-wrap:wrap;align-items:stretch\"\u003E";
+var w = 0;
 ;pug_debug_line = 8;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-// iterate [0,1,2,3,4,5,6]
+pug_html = pug_html + "\u003Cdiv id=\"content\" style=\"padding:3px;margin:auto;width:480px;height:400px;border:1px solid #ccc;box-shadow:0 3px 3px rgba(0,0,0,.2);border-radius:.25em;overflow:scroll;display:flex;flex-wrap:wrap;align-items:stretch\"\u003E";
+;pug_debug_line = 10;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+// iterate [0,1,2]
 ;(function(){
-  var $$obj = [0,1,2,3,4,5,6];
+  var $$obj = [0,1,2];
   if ('number' == typeof $$obj.length) {
       for (var pug_index0 = 0, $$l = $$obj.length; pug_index0 < $$l; pug_index0++) {
         var i = $$obj[pug_index0];
-;pug_debug_line = 9;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index1 = 0, $$l = $$obj.length; pug_index1 < $$l; pug_index1++) {
         var j = $$obj[pug_index1];
-;pug_debug_line = 10;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index2 = 0, $$l = $$obj.length; pug_index2 < $$l; pug_index2++) {
         var k = $$obj[pug_index2];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index3 = 0, $$l = $$obj.length; pug_index3 < $$l; pug_index3++) {
         var m = $$obj[pug_index3];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -63,13 +69,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index3 in $$obj) {
       $$l++;
       var m = $$obj[pug_index3];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -81,20 +91,24 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index2 in $$obj) {
       $$l++;
       var k = $$obj[pug_index2];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index4 = 0, $$l = $$obj.length; pug_index4 < $$l; pug_index4++) {
         var m = $$obj[pug_index4];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -102,13 +116,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index4 in $$obj) {
       $$l++;
       var m = $$obj[pug_index4];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -124,27 +142,31 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index1 in $$obj) {
       $$l++;
       var j = $$obj[pug_index1];
-;pug_debug_line = 10;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index5 = 0, $$l = $$obj.length; pug_index5 < $$l; pug_index5++) {
         var k = $$obj[pug_index5];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index6 = 0, $$l = $$obj.length; pug_index6 < $$l; pug_index6++) {
         var m = $$obj[pug_index6];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -152,13 +174,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index6 in $$obj) {
       $$l++;
       var m = $$obj[pug_index6];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -170,20 +196,24 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index5 in $$obj) {
       $$l++;
       var k = $$obj[pug_index5];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index7 = 0, $$l = $$obj.length; pug_index7 < $$l; pug_index7++) {
         var m = $$obj[pug_index7];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -191,13 +221,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index7 in $$obj) {
       $$l++;
       var m = $$obj[pug_index7];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -217,34 +251,38 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index0 in $$obj) {
       $$l++;
       var i = $$obj[pug_index0];
-;pug_debug_line = 9;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index8 = 0, $$l = $$obj.length; pug_index8 < $$l; pug_index8++) {
         var j = $$obj[pug_index8];
-;pug_debug_line = 10;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index9 = 0, $$l = $$obj.length; pug_index9 < $$l; pug_index9++) {
         var k = $$obj[pug_index9];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index10 = 0, $$l = $$obj.length; pug_index10 < $$l; pug_index10++) {
         var m = $$obj[pug_index10];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -252,13 +290,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index10 in $$obj) {
       $$l++;
       var m = $$obj[pug_index10];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -270,20 +312,24 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index9 in $$obj) {
       $$l++;
       var k = $$obj[pug_index9];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index11 = 0, $$l = $$obj.length; pug_index11 < $$l; pug_index11++) {
         var m = $$obj[pug_index11];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -291,13 +337,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index11 in $$obj) {
       $$l++;
       var m = $$obj[pug_index11];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -313,27 +363,31 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index8 in $$obj) {
       $$l++;
       var j = $$obj[pug_index8];
-;pug_debug_line = 10;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index12 = 0, $$l = $$obj.length; pug_index12 < $$l; pug_index12++) {
         var k = $$obj[pug_index12];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index13 = 0, $$l = $$obj.length; pug_index13 < $$l; pug_index13++) {
         var m = $$obj[pug_index13];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -341,13 +395,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index13 in $$obj) {
       $$l++;
       var m = $$obj[pug_index13];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -359,20 +417,24 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index12 in $$obj) {
       $$l++;
       var k = $$obj[pug_index12];
-;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2,3,4,5,6]
 ;(function(){
   var $$obj = [0,1,2,3,4,5,6];
   if ('number' == typeof $$obj.length) {
       for (var pug_index14 = 0, $$l = $$obj.length; pug_index14 < $$l; pug_index14++) {
         var m = $$obj[pug_index14];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -380,13 +442,17 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
     for (var pug_index14 in $$obj) {
       $$l++;
       var m = $$obj[pug_index14];
-;pug_debug_line = 12;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 14;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 idx = i * 343 + j * 49 + k * 7 + m;
-;pug_debug_line = 13;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
+;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = (40 + Math.random() * 40);
+;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 470;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -405,19 +471,21 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
 }).call(this);
 
 pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 20;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fassets\u002Flib\u002Fportal\u002Fdev\u002Findex.min.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fassets\u002Flib\u002Fldview\u002Fmain\u002Findex.min.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 22;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "new portal({\n  root: document.querySelector('#content')\n});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
+;pug_debug_line = 22;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "new portal({\n  root: document.querySelector('#content'),\n  delta: 30\n});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
     }.call(this, "Math" in locals_for_with ?
         locals_for_with.Math :
         typeof Math !== 'undefined' ? Math : undefined, "h" in locals_for_with ?
         locals_for_with.h :
         typeof h !== 'undefined' ? h : undefined, "idx" in locals_for_with ?
         locals_for_with.idx :
-        typeof idx !== 'undefined' ? idx : undefined));
+        typeof idx !== 'undefined' ? idx : undefined, "w" in locals_for_with ?
+        locals_for_with.w :
+        typeof w !== 'undefined' ? w : undefined));
     ;} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}; module.exports = template; })() 
