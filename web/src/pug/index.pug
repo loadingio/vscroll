@@ -2,13 +2,17 @@ doctype html
 html
   head
   body
-    //-#scroll(style="margin:auto;width:200px;height:400px;border:1px solid #ccc;box-shadow:0 3px 3px rgba(0,0,0,.2);border-radius:.25em;overflow:scroll"): #content(style="display:flex;flex-wrap:wrap;align-items:start")
-    #content(style="margin:auto;width:200px;height:400px;border:1px solid #ccc;box-shadow:0 3px 3px rgba(0,0,0,.2);border-radius:.25em;overflow:scroll;display:flex;flex-wrap:wrap;align-items:start")
+    - var idx = 0;
+    - var h = 0;
+    #content(style="padding:3px;margin:auto;width:480px;height:400px;border:1px solid #ccc;box-shadow:0 3px 3px rgba(0,0,0,.2);border-radius:.25em;overflow:scroll;display:flex;flex-wrap:wrap;align-items:stretch")
       each i in [0,1,2,3,4,5,6]
         each j in [0,1,2,3,4,5,6]
           each k in [0,1,2,3,4,5,6]
             each m in [0,1,2,3,4,5,6]
-              div(style=`height:${Math.random() * 50 + 20}px;flex:1 0 auto;margin:5px;background:#9bf;color:#fff;width:${40 + Math.random() * 40}px;text-align:center`) #{i * 343 + j * 49 + k * 7 + m}
+              - idx = i * 343 + j * 49 + k * 7 + m;
+              - h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20
+
+              div(style=`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${40 + Math.random() * 40}px;display:flex;align-items:center;justify-content:center`) #{idx}
     script(src="/assets/lib/portal/dev/index.min.js")
     script(src="/assets/lib/ldview/main/index.min.js")
     script: include:lsc index.ls
