@@ -58,10 +58,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -76,10 +76,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -105,10 +105,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -123,10 +123,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -163,10 +163,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -181,10 +181,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -210,10 +210,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -228,10 +228,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -279,10 +279,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -297,10 +297,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -326,10 +326,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -344,10 +344,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -384,10 +384,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -402,10 +402,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -431,10 +431,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -449,10 +449,10 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-w = 470;
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 230;
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -471,13 +471,13 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
 }).call(this);
 
 pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-;pug_debug_line = 20;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fassets\u002Flib\u002Fportal\u002Fdev\u002Findex.min.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cscript src=\"\u002Fassets\u002Flib\u002Fportal\u002Fdev\u002Findex.min.js\"\u003E\u003C\u002Fscript\u003E";
+;pug_debug_line = 22;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fassets\u002Flib\u002Fldview\u002Fmain\u002Findex.min.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 22;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 23;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript\u003E";
-;pug_debug_line = 22;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 23;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "new portal({\n  root: document.querySelector('#content'),\n  delta: 30\n});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
     }.call(this, "Math" in locals_for_with ?
         locals_for_with.Math :

@@ -25,7 +25,7 @@
     this.root.appendChild(ph.start);
     this.root.appendChild(ph.end);
     ph.start.style.width = ph.end.style.width = "100%";
-    this.range = [0, Math.min(this.delta - 1, this.nodes.length)];
+    this.range = [0, Math.min(this.delta - 1, this.nodes.length - 1)];
     for (i$ = this.range[0], to$ = this.range[1]; i$ <= to$; ++i$) {
       i = i$;
       this.root.insertBefore(this.nodes[i], ph.end);
@@ -37,7 +37,7 @@
   };
   portal.prototype = import$(Object.create(Object.prototype), {
     refresh: function(){
-      var ref$, root, delta, nodes, range, ph1, ph2, sbox, box1, box2, box3, box4, crange, min, i$, i, to$, max, ref1$, ch, hh1, hh2, height;
+      var ref$, root, delta, nodes, range, ph1, ph2, sbox, box1, box2, box3, box4, crange, refp, refpb, min, i$, i, to$, max, ref1$, ch, hh1, hh2, height, refpb2;
       ref$ = [this.root, this.delta, this.nodes, this.range], root = ref$[0], delta = ref$[1], nodes = ref$[2], range = ref$[3];
       ref$ = [this.placeholder.start, this.placeholder.end], ph1 = ref$[0], ph2 = ref$[1];
       sbox = root.getBoundingClientRect();
@@ -46,29 +46,33 @@
       box3 = range[0] + (delta - 1) < range[1] && nodes[range[0] + (delta - 1)] ? nodes[range[0] + (delta - 1)].getBoundingClientRect() : null;
       box4 = range[1] - (delta - 1) >= range[0] && nodes[range[1] - (delta - 1)] ? nodes[range[1] - (delta - 1)].getBoundingClientRect() : null;
       crange = [range[0], range[1]];
-      if (box1.y >= -sbox.height * 2) {
+      refp = nodes[range[0]];
+      refpb = refp.getBoundingClientRect();
+      if (box1.y >= -sbox.height * 1.5) {
         min = (ref$ = range[0] - delta) > 0 ? ref$ : 0;
         for (i$ = range[0] - 1; i$ >= min; --i$) {
           i = i$;
           root.insertBefore(nodes[i], ph1.nextSibling);
         }
         range[0] = min;
-      } else if (box3 && box3.y < -sbox.height * 2) {
+      } else if (box3 && box3.y < -sbox.height * 2.5) {
+        refp = nodes[range[0] + delta];
+        refpb = refp.getBoundingClientRect();
         for (i$ = range[0] + (delta - 1), to$ = range[0]; i$ >= to$; --i$) {
           i = i$;
           root.removeChild(nodes[i]);
         }
         range[0] = range[0] + delta;
       }
-      if (box2.y <= sbox.height * 2) {
+      if (box2.y <= sbox.height * 1.5) {
         max = (ref$ = range[1] + delta + 1) < (ref1$ = nodes.length) ? ref$ : ref1$;
         for (i$ = range[1] + 1; i$ < max; ++i$) {
           i = i$;
           root.insertBefore(nodes[i], ph2);
         }
         range[1] = max - 1;
-      } else if (box4 && box4.y > sbox.height * 2) {
-        for (i$ = range[1] - (delta - 1), to$ = range[1]; i$ < to$; ++i$) {
+      } else if (box4 && box4.y > sbox.height * 2.5) {
+        for (i$ = range[1] - (delta - 1), to$ = range[1]; i$ <= to$; ++i$) {
           i = i$;
           root.removeChild(nodes[i]);
         }
@@ -81,7 +85,9 @@
         this.phh.start = hh1 = height * (range[0] / nodes.length);
         this.phh.end = hh2 = height * ((nodes.length - range[1] - 1) / nodes.length);
         ph1.style.height = hh1 + "px";
-        return ph2.style.height = hh2 + "px";
+        ph2.style.height = hh2 + "px";
+        refpb2 = refp.getBoundingClientRect();
+        return root.scrollTop = root.scrollTop + (refpb2.y - refpb.y);
       }
     }
   });

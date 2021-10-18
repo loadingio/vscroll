@@ -10,7 +10,7 @@ portal = (opt={}) ->
   @root.appendChild ph.start
   @root.appendChild ph.end
   ph.start.style.width = ph.end.style.width = "100%"
-  @range = [0, Math.min(@delta - 1, @nodes.length)]
+  @range = [0, Math.min(@delta - 1, @nodes.length - 1)] # boundary ( inclusive both side )
   for i from @range.0 to @range.1 => @root.insertBefore @nodes[i], ph.end
   @root.addEventListener \scroll, ~> @refresh!
   @
@@ -29,19 +29,23 @@ portal.prototype = Object.create(Object.prototype) <<< do
       nodes[range.1 - (delta - 1)].getBoundingClientRect!
     else null
     crange = [range.0, range.1]
-    if box1.y >= -sbox.height * 2 =>
+    refp = nodes[range.0]
+    refpb = refp.getBoundingClientRect!
+    if box1.y >= -sbox.height * 1.5 =>
       min = range.0 - delta >? 0
       for i from range.0 - 1 to min by -1 => root.insertBefore nodes[i], ph1.nextSibling
       range.0 = min
-    else if box3 and box3.y < -sbox.height * 2 =>
+    else if box3 and box3.y < -sbox.height * 2.5 =>
+      refp = nodes[range.0 + delta]
+      refpb = refp.getBoundingClientRect!
       for i from range.0 + (delta - 1) to range.0 by -1 => root.removeChild nodes[i]
       range.0 = range.0 + delta
-    if box2.y <= sbox.height * 2 =>
+    if box2.y <= sbox.height * 1.5 =>
       max = range.1 + delta + 1 <? nodes.length
       for i from range.1 + 1 til max => root.insertBefore nodes[i], ph2
       range.1 = max - 1
-    else if box4 and box4.y > sbox.height * 2 =>
-      for i from range.1 - (delta - 1) til range.1 => root.removeChild nodes[i]
+    else if box4 and box4.y > sbox.height * 2.5 =>
+      for i from range.1 - (delta - 1) to range.1 => root.removeChild nodes[i]
       range.1 = range.1 - delta
     if !@phh.end or crange.0 != range.0 or crange.1 != range.1 =>
       ch = root.scrollHeight
@@ -51,5 +55,8 @@ portal.prototype = Object.create(Object.prototype) <<< do
       @phh.end = hh2 = height * ((nodes.length - range.1 - 1) / nodes.length)
       ph1.style.height = "#{hh1}px"
       ph2.style.height = "#{hh2}px"
+      refpb2 = refp.getBoundingClientRect!
+      root.scrollTop = root.scrollTop + (refpb2.y - refpb.y)
+
 if module? => module.exports = portal
 else if window? => window.portal = portal
