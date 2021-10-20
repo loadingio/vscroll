@@ -1,6 +1,4 @@
-# portal
-
-( project name is subject to change )
+# vscroll
 
 Remove elements that are not near visible regions while maintain the scroll bar height and position.
 
@@ -14,21 +12,47 @@ This is designed to be an alternative or replacement for `Clusterize.js`. The re
 
 ## Install
 
-    npm install --save portal
+    npm install --save @loadingio/vscroll
+
 
 ## Usage
 
 include required js file:
 
-    <script src="path-to-portal.js"></script>
+    <script src="path-to-dist/index.js"></script>
 
 
 initialize by passing the container element:
 
-    new portal({root: mycontainer});
+    vs = new vscroll.fixed({root: mycontainer});
+    vs.update!
 
 
-Please note that we expect the container to be limited in height and scrollable.
+You can update child elements just as if it is a regular DOM element. Just remember to call `update` after:
+
+    vs.insertBefore(newNode, vs.childNodes[0]);
+    vs.removeChild(vs.childNodes[vs.childNodes.length - 1]);
+    vs.update();
+
+Please note that we expect the container ( root parameter ) is limited in height and scrollable.
+
+
+## Variations
+
+`vscroll` (plans to) provides different types of virtual scroller, based on how they handle scroll events and manage DOM elements.
+
+
+### vscroll.fixed
+
+Only attach elements that are near visible region of the container. Expect following conditions:
+
+ - height per row are the same
+ - amount of element per row are the same
+
+
+### vscroll.dummy
+
+A dummy scroll wrapper. No virtualization, reflects DOM operations directly to `root`.
 
 
 ## License

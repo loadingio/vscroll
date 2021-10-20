@@ -6,8 +6,8 @@ echo "build src/index.ls -> dist/index.js ..."
 echo "minifying index.js ..."
 ./node_modules/.bin/uglifyjs dist/index.js > dist/index.min.js
 echo "Copy dist/ to web/ ..."
-rm -rf web/static/assets/lib/portal/dev/
-mkdir -p web/static/assets/lib/portal/dev/
-cp -R dist/* web/static/assets/lib/portal/dev/
+rm -rf web/static/assets/lib/@loadingio/vscroll/dev/
+mkdir -p web/static/assets/lib/@loadingio/vscroll/dev/
+cp -R dist/* web/static/assets/lib/@loadingio/vscroll/dev/
 echo "done."
 

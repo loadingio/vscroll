@@ -1,72 +1,95 @@
-portal = (opt={}) ->
-  @root = if typeof(opt.root) == \string => document.querySelector(opt.root) else opt.root
-  @nodes = opt.nodes or Array.from(@root.childNodes)
-  for i from @nodes.length - 1 to 0 by -1 => if @nodes[i].parentNode => @nodes[i].parentNode.removeChild @nodes[i]
-  @delta = opt.delta or 200
-  @placeholder = ph = 
-    start: document.createElement("div")
-    end: document.createElement("div")
-  @phh = start: 0, end: 0
-  @root.appendChild ph.start
-  @root.appendChild ph.end
-  ph.start.style.width = ph.end.style.width = "100%"
-  @range = [0, Math.min(@delta - 1, @nodes.length - 1)] # boundary ( inclusive both side )
-  for i from @range.0 to @range.1 => @root.insertBefore @nodes[i], ph.end
-  @handler = ~> @refresh!
-  @root.addEventListener \scroll, @handler #~> @refresh!
+vscroll = {}
+vscroll.fixed = (opt = {}) ->
+  @root = opt.root
+  @childNodes = Array.from(@root.childNodes)
+  @init!
   @
 
-portal.prototype = Object.create(Object.prototype) <<< do
-  refresh: ->
-    [root, delta, nodes, range] = [@root, @delta, @nodes, @range]
-    doit = ~>
-      [ph1, ph2] = [@placeholder.start, @placeholder.end]
-      rbox = root.getBoundingClientRect!
-      pvts = [range.0, range.0 + delta, range.1, range.1 - delta]
-        .map -> if nodes[it] => nodes[it].getBoundingClientRect! else null
+vscroll.fixed.prototype = Object.create(Object.prototype) <<<
+  init: ->
+    @ <<< range: [1, 0], row: 1, count: 1
+    @ph = [0,1]
+      .map -> document.createElement \div
+      .map ~>
+        it.style <<< width: \100%, height: \0px
+        @root.appendChild it
+    @root.addEventListener \scroll, ~> @handler!
+    @rbox = {height: 0}
 
-      console.log([
-        Math.round(rbox.height)
-        root.scrollHeight
-        "[scrolltop: ", root.scrollTop, "]"
-        range, "[",
-        Math.round(pvts.0.y), Math.round(if pvts.1 => pvts.1.y else 0), "] ["
-        Math.round(pvts.2.y), Math.round(if pvts.3 => pvts.3.y else 0), "]"
-        Math.round(@phh.start), Math.round(@phh.end)
-      ].join(' '))
-      redo = false
+  update: ->
+    @rbox = @root.getBoundingClientRect!
+    @ <<< row: 0, count: 1
+    @range.0 = @range.0 <? @childNodes.length - 1
+    @range.1 = @range.1 <? @childNodes.length - 1
+    for i from 0 til (@childNodes.length <? 100) =>
+      if !@childNodes[i].parentNode => @root.insertBefore @childNodes[i], @ph.1
+    y = undefined
+    for i from 0 til @childNodes.length =>
+      box = @childNodes[i].getBoundingClientRect!
+      @line-height = box.height
+      if !(y?) => y = box.y
+      else if box.y == y => @count++
+      else
+        @line-height = box.y - y
+        break
+    for i from 0 til @childNodes.length =>
+      box = @childNodes[i].getBoundingClientRect!
+      if box.y <= @rbox.height * 4 => continue
+      @row = (Math.ceil(i / @count) >? 1)
+      break
+    @delta = (@row * @count) >? 1
+    @childNodes.map -> if it.parentNode => it.parentNode.removeChild it
+    @handler!
 
-      if pvts.2.y < rbox.height * 2 =>
-        val = range.1 + delta <? nodes.length - 1
-        for i from range.1 + 1 to val => root.insertBefore nodes[i], ph2
-        range.1 = val
-        redo = true
+  handler: ->
+    [len, delta, count, nodes, lh, root, ph, rbox, range] = [
+      @childNodes.length, @delta, @count, @childNodes, @line-height, @root, @ph, @rbox, @range
+    ]
+    [min,max] = [len,-1]
+    for i from 0 til len by delta =>
+      j = (i + delta - 1) <? (nodes.length - 1)
+      b1 = {y: (i/count) * lh, height: lh}
+      b2 = {y: (j/count) * lh, height: lh}
+      if b1.y - root.scrollTop <= 1.5 * rbox.height and b2.y + b2.height - root.scrollTop > -0.5 * rbox.height =>
+        if i < min => min = i
+        if j > max => max = j
+    if root.scrollTop > root.scrollHeight / 2 and min == len and max == -1 =>
+      [min, max] = [delta * Math.floor(len / delta), len - 1]
+    for i from (range.0 >? 0) til min => if nodes[i].parentNode => root.removeChild nodes[i]
+    for i from range.0 - 1 to min by -1 => if !nodes[i].parentNode => root.insertBefore nodes[i], ph.0.nextSibling
+    for i from range.1 til max by -1 => if nodes[i].parentNode => root.removeChild nodes[i]
+    for i from range.1 + 1 to max => if !nodes[i].parentNode => root.insertBefore nodes[i], ph.1
+    @range = [min, max]
+    ph.0.style.height = "#{lh * ((min/count) >? 0)}px"
+    ph.1.style.height = "#{lh * Math.floor((len - max - 1) / count)}px"
 
-      if pvts.3 and pvts.3.y > rbox.height * 2 =>
-        val = range.1 - delta >? 0
-        for i from range.1 til val by -1 => root.removeChild nodes[i]
-        range.1 = val
-        redo = true
+  appendChild: (n) ->
+    @childNodes.splice @childNodes.length, 0, n
+  insertBefore: (n, s) ->
+    idx = @childNodes.indexOf(s)
+    if idx < 0 => idx = @childNodes.length
+    @childNodes.splice idx, 0, n
+  removeChild: (n) ->
+    if !~(idx = @childNodes.indexOf n) => return
+    @childNodes.splice idx, 1
 
-      [hh1, hh2] = [@phh.start, @phh.end]
-      total = nodes.length * (root.scrollHeight - hh1 - hh2) / ((range.1 - range.0 + 1) >? 1)
-      @phh.start = hh1 = total * ((range.0) >? 0) / (nodes.length >? 1)
-      @phh.end = hh2 = total * ((nodes.length - range.1 - 1) >? 0) / (nodes.length >? 1)
-      #ph1.style.height = "#{hh1}px"
-      #ph2.style.height = "#{hh2}px"
-      console.log [root.scrollHeight, hh1, hh2].map -> Math.round(it)
-      root.offsetHeight
-      return redo
-    if @pending == 1 =>
-      setTimeout (~>
-        @pending = 0
-        ret = doit!
-        if ret => @pending = 1
-      ), 1000
-      @pending = 2
-    else if !@pending =>
-      ret = doit!
-      if ret => @pending = 1
 
-if module? => module.exports = portal
-else if window? => window.portal = portal
+vscroll.dummy = (opt = {}) ->
+  @root = opt.root
+  @childNodes = []
+  @
+
+vscroll.dummy.prototype = Object.create(Object.prototype) <<<
+  appendChild: (n) ->
+    @childNodes.splice @childNodes.length, 0, n
+    @root.appendChild n
+  insertBefore: (n, s) ->
+    @childNodes.splice @childNodes.indexOf(s), 0, n
+    @root.insertBefore n, s
+  removeChild: (n) ->
+    if !~(idx = @childNodes.indexOf n) => return
+    @childNodes.splice idx, 1
+    @root.removeChild n
+
+if module? => module.exports = vscroll
+else if window? => window.vscroll = vscroll
