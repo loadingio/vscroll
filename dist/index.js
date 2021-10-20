@@ -30,64 +30,72 @@
       i = i$;
       this.root.insertBefore(this.nodes[i], ph.end);
     }
-    this.root.addEventListener('scroll', function(){
+    this.handler = function(){
       return this$.refresh();
-    });
+    };
+    this.root.addEventListener('scroll', this.handler);
     return this;
   };
   portal.prototype = import$(Object.create(Object.prototype), {
     refresh: function(){
-      var ref$, root, delta, nodes, range, ph1, ph2, sbox, box1, box2, box3, box4, crange, refp, refpb, min, i$, i, to$, max, ref1$, ch, hh1, hh2, height, refpb2;
+      var ref$, root, delta, nodes, range, doit, ret, this$ = this;
       ref$ = [this.root, this.delta, this.nodes, this.range], root = ref$[0], delta = ref$[1], nodes = ref$[2], range = ref$[3];
-      ref$ = [this.placeholder.start, this.placeholder.end], ph1 = ref$[0], ph2 = ref$[1];
-      sbox = root.getBoundingClientRect();
-      box1 = nodes[range[0]].getBoundingClientRect();
-      box2 = nodes[range[1]].getBoundingClientRect();
-      box3 = range[0] + (delta - 1) < range[1] && nodes[range[0] + (delta - 1)] ? nodes[range[0] + (delta - 1)].getBoundingClientRect() : null;
-      box4 = range[1] - (delta - 1) >= range[0] && nodes[range[1] - (delta - 1)] ? nodes[range[1] - (delta - 1)].getBoundingClientRect() : null;
-      crange = [range[0], range[1]];
-      refp = nodes[range[0]];
-      refpb = refp.getBoundingClientRect();
-      if (box1.y >= -sbox.height * 1.5) {
-        min = (ref$ = range[0] - delta) > 0 ? ref$ : 0;
-        for (i$ = range[0] - 1; i$ >= min; --i$) {
-          i = i$;
-          root.insertBefore(nodes[i], ph1.nextSibling);
+      doit = function(){
+        var ref$, ph1, ph2, rbox, pvts, redo, val, ref1$, i$, i, hh1, hh2, total;
+        ref$ = [this$.placeholder.start, this$.placeholder.end], ph1 = ref$[0], ph2 = ref$[1];
+        rbox = root.getBoundingClientRect();
+        pvts = [range[0], range[0] + delta, range[1], range[1] - delta].map(function(it){
+          if (nodes[it]) {
+            return nodes[it].getBoundingClientRect();
+          } else {
+            return null;
+          }
+        });
+        console.log([Math.round(rbox.height), root.scrollHeight, "[scrolltop: ", root.scrollTop, "]", range, "[", Math.round(pvts[0].y), Math.round(pvts[1] ? pvts[1].y : 0), "] [", Math.round(pvts[2].y), Math.round(pvts[3] ? pvts[3].y : 0), "]", Math.round(this$.phh.start), Math.round(this$.phh.end)].join(' '));
+        redo = false;
+        if (pvts[2].y < rbox.height * 2) {
+          val = (ref$ = range[1] + delta) < (ref1$ = nodes.length - 1) ? ref$ : ref1$;
+          for (i$ = range[1] + 1; i$ <= val; ++i$) {
+            i = i$;
+            root.insertBefore(nodes[i], ph2);
+          }
+          range[1] = val;
+          redo = true;
         }
-        range[0] = min;
-      } else if (box3 && box3.y < -sbox.height * 2.5) {
-        refp = nodes[range[0] + delta];
-        refpb = refp.getBoundingClientRect();
-        for (i$ = range[0] + (delta - 1), to$ = range[0]; i$ >= to$; --i$) {
-          i = i$;
-          root.removeChild(nodes[i]);
+        if (pvts[3] && pvts[3].y > rbox.height * 2) {
+          val = (ref$ = range[1] - delta) > 0 ? ref$ : 0;
+          for (i$ = range[1]; i$ > val; --i$) {
+            i = i$;
+            root.removeChild(nodes[i]);
+          }
+          range[1] = val;
+          redo = true;
         }
-        range[0] = range[0] + delta;
-      }
-      if (box2.y <= sbox.height * 1.5) {
-        max = (ref$ = range[1] + delta + 1) < (ref1$ = nodes.length) ? ref$ : ref1$;
-        for (i$ = range[1] + 1; i$ < max; ++i$) {
-          i = i$;
-          root.insertBefore(nodes[i], ph2);
+        ref$ = [this$.phh.start, this$.phh.end], hh1 = ref$[0], hh2 = ref$[1];
+        total = nodes.length * (root.scrollHeight - hh1 - hh2) / ((ref$ = range[1] - range[0] + 1) > 1 ? ref$ : 1);
+        this$.phh.start = hh1 = total * ((ref$ = range[0]) > 0 ? ref$ : 0) / ((ref$ = nodes.length) > 1 ? ref$ : 1);
+        this$.phh.end = hh2 = total * ((ref$ = nodes.length - range[1] - 1) > 0 ? ref$ : 0) / ((ref$ = nodes.length) > 1 ? ref$ : 1);
+        console.log([root.scrollHeight, hh1, hh2].map(function(it){
+          return Math.round(it);
+        }));
+        root.offsetHeight;
+        return redo;
+      };
+      if (this.pending === 1) {
+        setTimeout(function(){
+          var ret;
+          this$.pending = 0;
+          ret = doit();
+          if (ret) {
+            return this$.pending = 1;
+          }
+        }, 1000);
+        return this.pending = 2;
+      } else if (!this.pending) {
+        ret = doit();
+        if (ret) {
+          return this.pending = 1;
         }
-        range[1] = max - 1;
-      } else if (box4 && box4.y > sbox.height * 2.5) {
-        for (i$ = range[1] - (delta - 1), to$ = range[1]; i$ <= to$; ++i$) {
-          i = i$;
-          root.removeChild(nodes[i]);
-        }
-        range[1] = range[1] - delta;
-      }
-      if (!this.phh.end || crange[0] !== range[0] || crange[1] !== range[1]) {
-        ch = root.scrollHeight;
-        ref$ = [this.phh.start, this.phh.end], hh1 = ref$[0], hh2 = ref$[1];
-        height = (ch - (hh1 || 0) - (hh2 || 0)) * nodes.length / (range[1] - range[0]);
-        this.phh.start = hh1 = height * (range[0] / nodes.length);
-        this.phh.end = hh2 = height * ((nodes.length - range[1] - 1) / nodes.length);
-        ph1.style.height = hh1 + "px";
-        ph2.style.height = hh2 + "px";
-        refpb2 = refp.getBoundingClientRect();
-        return root.scrollTop = root.scrollTop + (refpb2.y - refpb.y);
       }
     }
   });

@@ -22,7 +22,7 @@ var h = 0;
 ;pug_debug_line = 7;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 var w = 0;
 ;pug_debug_line = 8;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv id=\"content\" style=\"padding:3px;margin:auto;width:480px;height:400px;border:1px solid #ccc;box-shadow:0 3px 3px rgba(0,0,0,.2);border-radius:.25em;overflow:scroll;display:flex;flex-wrap:wrap;align-items:stretch\"\u003E";
+pug_html = pug_html + "\u003Cdiv id=\"content\" style=\"margin:auto;width:480px;height:400px;border:1px solid #ccc;box-shadow:0 3px 3px rgba(0,0,0,.2);border-radius:.25em;overflow:scroll;display:flex;flex-wrap:wrap;align-items:stretch;gap:3px;padding:3px\"\u003E";
 ;pug_debug_line = 10;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 // iterate [0,1,2]
 ;(function(){
@@ -58,10 +58,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -76,10 +80,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -105,10 +113,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -123,10 +135,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -163,10 +179,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -181,10 +201,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -210,10 +234,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -228,10 +256,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -279,10 +311,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -297,10 +333,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -326,10 +366,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -344,10 +388,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -384,10 +432,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -402,10 +454,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -431,10 +487,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -449,10 +509,14 @@ h = (Math.random() * 3 + 1) * (Math.sin(idx / 10) + 2) * 20;
 ;pug_debug_line = 16;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = (40 + Math.random() * 40);
 ;pug_debug_line = 17;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+h = 50;
+;pug_debug_line = 18;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 w = 230;
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;margin:3px;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
-;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+w = 120;
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv" + (pug_attr("style", pug_style(`min-height:${h}px;flex:1 0 auto;background:#69f;color:#fff;width:${w}px;display:flex;align-items:center;justify-content:center`), true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
     }
   }
@@ -471,14 +535,14 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = idx) ? "" : pug_interp))
 }).call(this);
 
 pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-;pug_debug_line = 21;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 23;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fassets\u002Flib\u002Fportal\u002Fdev\u002Findex.min.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 22;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 24;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fassets\u002Flib\u002Fldview\u002Fmain\u002Findex.min.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 23;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+;pug_debug_line = 25;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript\u003E";
-;pug_debug_line = 23;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "new portal({\n  root: document.querySelector('#content'),\n  delta: 30\n});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
+;pug_debug_line = 25;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
+pug_html = pug_html + "var root, rbox, nodes, boxes, total, bh, ph, range, ref$, row, count, y, i$, to$, i, delta, handler;\nroot = document.querySelector('#content');\nrbox = root.getBoundingClientRect();\nnodes = Array.from(root.childNodes);\nboxes = nodes.map(function(it){\n  var box;\n  box = it.getBoundingClientRect();\n  box.y = box.y - rbox.y;\n  return box;\n});\nnodes.map(function(it){\n  return it.parentNode.removeChild(it);\n});\ntotal = boxes.reduce(function(a, b){\n  return a + b.height;\n}, 0);\nbh = boxes[0].height + 3;\nph = [0, 1].map(function(){\n  return document.createElement('div');\n}).map(function(it){\n  return root.appendChild(it);\n});\nph[1].style.height = total + \"px\";\nph[0].style.width = \"100%\";\nph[1].style.width = \"100%\";\nrange = [0, 0];\nref$ = [30, 3], row = ref$[0], count = ref$[1];\nref$ = [boxes[0].y, 0], y = ref$[0], count = ref$[1];\nfor (i$ = 0, to$ = boxes.length; i$ \u003C to$; ++i$) {\n  i = i$;\n  if (boxes[i].y === y) {\n    count++;\n  } else {\n    break;\n  }\n}\nfor (i$ = 0, to$ = boxes.length; i$ \u003C to$; ++i$) {\n  i = i$;\n  if (boxes[i].y \u003E rbox.height * 2) {\n    row = Math.ceil(i \u002F count);\n    break;\n  }\n}\ndelta = row * count;\nhandler = function(){\n  var ref$, min, max, i$, step$, to$, i, j, ref1$, b1, b2;\n  ref$ = [boxes.length, -1], min = ref$[0], max = ref$[1];\n  for (i$ = 0, to$ = boxes.length, step$ = delta; step$ \u003C 0 ? i$ \u003E to$ : i$ \u003C to$; i$ += step$) {\n    i = i$;\n    j = (ref$ = i + delta - 1) \u003C (ref1$ = nodes.length - 1) ? ref$ : ref1$;\n    b1 = boxes[i];\n    b2 = boxes[j];\n    b1 = {\n      y: (i \u002F count) * bh,\n      height: bh\n    };\n    b2 = {\n      y: (j \u002F count) * bh,\n      height: bh\n    };\n    if (b1.y - root.scrollTop \u003C= 1.5 * rbox.height && b2.y + b2.height - root.scrollTop \u003E -0.5 * rbox.height) {\n      if (i \u003C min) {\n        min = i;\n      }\n      if (j \u003E max) {\n        max = j;\n      }\n    }\n  }\n  if (root.scrollTop \u003E root.scrollHeight \u002F 2 && min === boxes.length && max === -1) {\n    ref$ = [1000, 1028], min = ref$[0], max = ref$[1];\n  }\n  for (i$ = range[0]; i$ \u003C min; ++i$) {\n    i = i$;\n    if (nodes[i].parentNode) {\n      root.removeChild(nodes[i]);\n    }\n  }\n  for (i$ = range[0] - 1; i$ \u003E= min; --i$) {\n    i = i$;\n    if (!nodes[i].parentNode) {\n      root.insertBefore(nodes[i], ph[0].nextSibling);\n    }\n  }\n  for (i$ = range[1]; i$ \u003E max; --i$) {\n    i = i$;\n    if (nodes[i].parentNode) {\n      root.removeChild(nodes[i]);\n    }\n  }\n  for (i$ = range[1] + 1; i$ \u003C= max; ++i$) {\n    i = i$;\n    if (!nodes[i].parentNode) {\n      root.insertBefore(nodes[i], ph[1]);\n    }\n  }\n  range = [min, max];\n  ph[0].style.height = bh * ((ref$ = min \u002F count) \u003E 0 ? ref$ : 0) + \"px\";\n  return ph[1].style.height = bh * Math.floor((boxes.length - max - 1) \u002F count) + \"px\";\n};\nroot.addEventListener('scroll', handler);\nhandler();\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
     }.call(this, "Math" in locals_for_with ?
         locals_for_with.Math :
         typeof Math !== 'undefined' ? Math : undefined, "h" in locals_for_with ?
