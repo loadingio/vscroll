@@ -13,7 +13,7 @@
   "dependencies": {
     "@zbryikt/template": "^2.3.22",
     "fedep": "0.0.16",
-    "ldview": "^0.2.3"
+    "ldview": "^0.2.4"
   },
   "frontendDependencies": {
     "root": "web/static/assets/lib",
