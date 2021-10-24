@@ -11,17 +11,17 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
     @ph = [0,1]
       .map -> document.createElement \div
       .map ~>
-        it.style <<< width: \100%, height: \0px
+        it.style <<< width: \100%, height: \0px, gridColumn: "1 / -1"
         @root.appendChild it
     @root.addEventListener \scroll, ~> @handler!
     @rbox = {height: 0}
 
   update: ->
-    @rbox = @root.getBoundingClientRect!
+    @rbox = rbox = @root.getBoundingClientRect!
     @ <<< row: 0, count: 1
     @range.0 = @range.0 <? @childNodes.length - 1
     @range.1 = @range.1 <? @childNodes.length - 1
-    for i from 0 til (@childNodes.length <? 100) =>
+    for i from 0 til @childNodes.length =>
       if !@childNodes[i].parentNode => @root.insertBefore @childNodes[i], @ph.1
     y = undefined
     for i from 0 til @childNodes.length =>
@@ -36,7 +36,7 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
     for i from 0 til @childNodes.length =>
       if @childNodes[i].nodeType != Node.ELEMENT_NODE => continue
       box = @childNodes[i].getBoundingClientRect!
-      if box.y <= @rbox.height * 4 => continue
+      if (box.y - rbox.y) <= rbox.height * 4 => continue
       @row = (Math.ceil(i / @count) >? 1)
       break
     @delta = (@row * @count) >? 1

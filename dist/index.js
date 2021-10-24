@@ -20,6 +20,7 @@
       ref$ = it.style;
       ref$.width = '100%';
       ref$.height = '0px';
+      ref$.gridColumn = "1 / -1";
       return this$.root.appendChild(it);
     });
     this.root.addEventListener('scroll', function(){
@@ -29,13 +30,13 @@
       height: 0
     };
   }, ref$.update = function(){
-    var ref$, ref1$, i$, to$, i, y, box;
-    this.rbox = this.root.getBoundingClientRect();
+    var rbox, ref$, ref1$, i$, to$, i, y, box;
+    this.rbox = rbox = this.root.getBoundingClientRect();
     this.row = 0;
     this.count = 1;
     this.range[0] = (ref$ = this.range[0]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
     this.range[1] = (ref$ = this.range[1]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
-    for (i$ = 0, to$ = (ref$ = this.childNodes.length) < 100 ? ref$ : 100; i$ < to$; ++i$) {
+    for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
       i = i$;
       if (!this.childNodes[i].parentNode) {
         this.root.insertBefore(this.childNodes[i], this.ph[1]);
@@ -64,7 +65,7 @@
         continue;
       }
       box = this.childNodes[i].getBoundingClientRect();
-      if (box.y <= this.rbox.height * 4) {
+      if (box.y - rbox.y <= rbox.height * 4) {
         continue;
       }
       this.row = (ref$ = Math.ceil(i / this.count)) > 1 ? ref$ : 1;
