@@ -1,5 +1,15 @@
 # Change Logs
 
+## v0.0.3
+
+ - by default set `grid-column: 1 / -1` in placeholder to support grid layout
+ - insert all nodes initially instead of only 100 items to correctly get row and count
+   - this can be improved by progressively insertion in the future.
+ - calculate row count by relative node position to container instead of to viewport
+ - reset values, DOM and scrollTop when call `update` to prevent glitches.
+   - we may want to preserve scrollTop in the future update.
+
+
 ## v0.0.2
 
  - don't calculate box for elements that are not ELEMENT_NODE
