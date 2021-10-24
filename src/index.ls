@@ -25,6 +25,7 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
       if !@childNodes[i].parentNode => @root.insertBefore @childNodes[i], @ph.1
     y = undefined
     for i from 0 til @childNodes.length =>
+      if  @childNodes[i].nodeType != Node.ELEMENT_NODE => continue
       box = @childNodes[i].getBoundingClientRect!
       @line-height = box.height
       if !(y?) => y = box.y
@@ -33,6 +34,7 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
         @line-height = box.y - y
         break
     for i from 0 til @childNodes.length =>
+      if @childNodes[i].nodeType != Node.ELEMENT_NODE => continue
       box = @childNodes[i].getBoundingClientRect!
       if box.y <= @rbox.height * 4 => continue
       @row = (Math.ceil(i / @count) >? 1)

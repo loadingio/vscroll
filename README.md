@@ -34,7 +34,10 @@ You can update child elements just as if it is a regular DOM element. Just remem
     vs.removeChild(vs.childNodes[vs.childNodes.length - 1]);
     vs.update();
 
-Please note that we expect the container ( root parameter ) is limited in height and scrollable.
+Please note that:
+
+ - we expect the container ( root parameter ) is limited in height and scrollable.
+ - we expect nodes to be visible when calling `update`, otherwise we can't correctly calcualte its diemsion.
 
 
 ## Variations

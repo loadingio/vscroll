@@ -44,6 +44,9 @@
     y = undefined;
     for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
       i = i$;
+      if (this.childNodes[i].nodeType !== Node.ELEMENT_NODE) {
+        continue;
+      }
       box = this.childNodes[i].getBoundingClientRect();
       this.lineHeight = box.height;
       if (!(y != null)) {
@@ -57,6 +60,9 @@
     }
     for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
       i = i$;
+      if (this.childNodes[i].nodeType !== Node.ELEMENT_NODE) {
+        continue;
+      }
       box = this.childNodes[i].getBoundingClientRect();
       if (box.y <= this.rbox.height * 4) {
         continue;
