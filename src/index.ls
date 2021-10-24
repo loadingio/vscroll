@@ -7,7 +7,6 @@ vscroll.fixed = (opt = {}) ->
 
 vscroll.fixed.prototype = Object.create(Object.prototype) <<<
   init: ->
-    @ <<< range: [1, 0], row: 1, count: 1
     @ph = [0,1]
       .map -> document.createElement \div
       .map ~>
@@ -19,8 +18,18 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
   update: ->
     @rbox = rbox = @root.getBoundingClientRect!
     @ <<< row: 0, count: 1
+
+    # always clear and reset values so re-update won't mess up things.
+    # however, this doesn't preserve scrollTop.
+    # TODO we may want to support scrollTop preservation after update.
+    @ <<< range: [1, 0], row: 1, count: 1
     @range.0 = @range.0 <? @childNodes.length - 1
     @range.1 = @range.1 <? @childNodes.length - 1
+    @ph.0.style.height = @ph.1.style.height = "0px"
+    @root.scrollTop = 0
+    for i from 0 til @childNodes.length =>
+      if @childNodes[i].parentNode => @childNodes[i].parentNode.removeChild @childNodes[i]
+
     for i from 0 til @childNodes.length =>
       if !@childNodes[i].parentNode => @root.insertBefore @childNodes[i], @ph.1
     y = undefined

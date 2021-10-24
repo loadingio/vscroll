@@ -10,9 +10,6 @@
   };
   vscroll.fixed.prototype = (ref$ = Object.create(Object.prototype), ref$.init = function(){
     var this$ = this;
-    this.range = [1, 0];
-    this.row = 1;
-    this.count = 1;
     this.ph = [0, 1].map(function(){
       return document.createElement('div');
     }).map(function(it){
@@ -34,8 +31,19 @@
     this.rbox = rbox = this.root.getBoundingClientRect();
     this.row = 0;
     this.count = 1;
+    this.range = [1, 0];
+    this.row = 1;
+    this.count = 1;
     this.range[0] = (ref$ = this.range[0]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
     this.range[1] = (ref$ = this.range[1]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
+    this.ph[0].style.height = this.ph[1].style.height = "0px";
+    this.root.scrollTop = 0;
+    for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
+      i = i$;
+      if (this.childNodes[i].parentNode) {
+        this.childNodes[i].parentNode.removeChild(this.childNodes[i]);
+      }
+    }
     for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
       i = i$;
       if (!this.childNodes[i].parentNode) {
