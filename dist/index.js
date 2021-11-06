@@ -21,7 +21,7 @@
       return this$.root.appendChild(it);
     });
     this.root.addEventListener('scroll', function(){
-      return this$.handler();
+      return this$.locate();
     });
     return this.rbox = {
       height: 0
@@ -85,8 +85,8 @@
         return it.parentNode.removeChild(it);
       }
     });
-    return this.handler();
-  }, ref$.handler = function(){
+    return this.locate();
+  }, ref$.locate = function(){
     var ref$, len, delta, count, nodes, lh, root, ph, rbox, range, min, max, i$, i, j, ref1$, b1, b2;
     ref$ = [this.childNodes.length, this.delta, this.count, this.childNodes, this.lineHeight, this.root, this.ph, this.rbox, this.range], len = ref$[0], delta = ref$[1], count = ref$[2], nodes = ref$[3], lh = ref$[4], root = ref$[5], ph = ref$[6], rbox = ref$[7], range = ref$[8];
     ref$ = [len, -1], min = ref$[0], max = ref$[1];

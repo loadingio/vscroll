@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.0.4
+
+ - rename `handler` to `locate` to reflect its purpose and make it as an open api
+
+
 ## v0.0.3
 
  - by default set `grid-column: 1 / -1` in placeholder to support grid layout

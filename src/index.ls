@@ -12,7 +12,7 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
       .map ~>
         it.style <<< width: \100%, height: \0px, gridColumn: "1 / -1"
         @root.appendChild it
-    @root.addEventListener \scroll, ~> @handler!
+    @root.addEventListener \scroll, ~> @locate!
     @rbox = {height: 0}
 
   update: ->
@@ -50,9 +50,9 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
       break
     @delta = (@row * @count) >? 1
     @childNodes.map -> if it.parentNode => it.parentNode.removeChild it
-    @handler!
+    @locate!
 
-  handler: ->
+  locate: ->
     [len, delta, count, nodes, lh, root, ph, rbox, range] = [
       @childNodes.length, @delta, @count, @childNodes, @line-height, @root, @ph, @rbox, @range
     ]

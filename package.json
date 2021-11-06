@@ -1,6 +1,6 @@
 {
   "name": "@loadingio/vscroll",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "files": ["dist/**/*"],
@@ -8,8 +8,8 @@
     "start": "npx server -r web -o true"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zbryikt",
+  "license": "MIT",
   "dependencies": {
     "@zbryikt/template": "^2.3.22",
     "fedep": "0.0.16",
