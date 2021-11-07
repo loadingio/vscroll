@@ -26,32 +26,44 @@
     return this.rbox = {
       height: 0
     };
-  }, ref$.update = function(){
-    var rbox, ref$, ref1$, i$, to$, i, y, box;
-    this.rbox = rbox = this.root.getBoundingClientRect();
-    this.row = 0;
-    this.count = 1;
+  }, ref$.setchild = function(it){
+    var tpl;
+    tpl = document.createElement('template');
+    tpl.innerHTML = it;
+    this.childNodes = Array.from(tpl.content.childNodes);
+    this.root.innerHTML = '';
+    if (!this.ph[0].parentNode) {
+      this.root.insertBefore(this.ph[0], this.root.childNodes[0]);
+    }
+    if (!this.ph[1].parentNode) {
+      return this.root.appendChild(this.ph[1]);
+    }
+  }, ref$.update = function(probeLen){
+    var ref$, ref1$, i$, to$, i, len, rbox, y, box;
+    probeLen == null && (probeLen = 0);
     this.range = [1, 0];
     this.row = 1;
     this.count = 1;
     this.range[0] = (ref$ = this.range[0]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
     this.range[1] = (ref$ = this.range[1]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
-    this.ph[0].style.height = this.ph[1].style.height = "0px";
-    this.root.scrollTop = 0;
     for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
       i = i$;
       if (this.childNodes[i].parentNode) {
         this.childNodes[i].parentNode.removeChild(this.childNodes[i]);
       }
     }
-    for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
+    len = probeLen || this.childNodes.length;
+    for (i$ = 0; i$ < len; ++i$) {
       i = i$;
       if (!this.childNodes[i].parentNode) {
         this.root.insertBefore(this.childNodes[i], this.ph[1]);
       }
     }
+    this.ph[0].style.height = this.ph[1].style.height = "0px";
+    this.root.scrollTop = 0;
+    this.rbox = rbox = this.root.getBoundingClientRect();
     y = undefined;
-    for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
+    for (i$ = 0; i$ < len; ++i$) {
       i = i$;
       if (this.childNodes[i].nodeType !== Node.ELEMENT_NODE) {
         continue;
@@ -67,28 +79,33 @@
         break;
       }
     }
-    for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
-      i = i$;
-      if (this.childNodes[i].nodeType !== Node.ELEMENT_NODE) {
-        continue;
-      }
-      box = this.childNodes[i].getBoundingClientRect();
-      if (box.y - rbox.y <= rbox.height * 4) {
-        continue;
-      }
-      this.row = (ref$ = Math.ceil(i / this.count)) > 1 ? ref$ : 1;
-      break;
-    }
+    /*
+    # can merge with above.
+    # we dont seem to need this, since row can be infered based on rbox.height and @line-height below.
+    # remove it once we confirm this.
+    for i from 0 til len =>
+      if @childNodes[i].nodeType != Node.ELEMENT_NODE => continue
+      box = @childNodes[i].getBoundingClientRect!
+      if (box.y - rbox.y) <= rbox.height * 4 => continue
+      @row = (Math.ceil(i / @count) >? 1)
+      break
+    */
+    this.row = Math.ceil((rbox.height * 4) / (this.lineHeight || 1));
     this.delta = (ref$ = this.row * this.count) > 1 ? ref$ : 1;
-    this.childNodes.map(function(it){
-      if (it.parentNode) {
-        return it.parentNode.removeChild(it);
-      }
-    });
+    for (i$ = 0; i$ < len; ++i$) {
+      i = i$;
+      this.childNodes[i].parentNode.removeChild(this.childNodes[i]);
+    }
     return this.locate();
   }, ref$.locate = function(){
     var ref$, len, delta, count, nodes, lh, root, ph, rbox, range, min, max, i$, i, j, ref1$, b1, b2;
     ref$ = [this.childNodes.length, this.delta, this.count, this.childNodes, this.lineHeight, this.root, this.ph, this.rbox, this.range], len = ref$[0], delta = ref$[1], count = ref$[2], nodes = ref$[3], lh = ref$[4], root = ref$[5], ph = ref$[6], rbox = ref$[7], range = ref$[8];
+    if (!ph[0].parentNode) {
+      root.insertBefore(ph[0], root.childNodes[0]);
+    }
+    if (!ph[1].parentNode) {
+      root.appendChild(ph[1]);
+    }
     ref$ = [len, -1], min = ref$[0], max = ref$[1];
     for (i$ = 0; delta < 0 ? i$ > len : i$ < len; i$ += delta) {
       i = i$;
@@ -116,7 +133,7 @@
     for (i$ = (ref$ = range[0]) > 0 ? ref$ : 0; i$ < min; ++i$) {
       i = i$;
       if (nodes[i].parentNode) {
-        root.removeChild(nodes[i]);
+        nodes[i].parentNode.removeChild(nodes[i]);
       }
     }
     for (i$ = range[0] - 1; i$ >= min; --i$) {
@@ -128,7 +145,7 @@
     for (i$ = range[1]; i$ > max; --i$) {
       i = i$;
       if (nodes[i].parentNode) {
-        root.removeChild(nodes[i]);
+        nodes[i].parentNode.removeChild(nodes[i]);
       }
     }
     for (i$ = range[1] + 1; i$ <= max; ++i$) {

@@ -1,5 +1,13 @@
 # Change Logs
 
+## v0.0.5
+
+ - support `setChild` for directly update content via innerHTML
+ - support update based on partial content with an additional parameter `probe-len`
+ - make `update` faster by removing unnecessary calculation
+ - bug fix: use the real parent before removing node
+ 
+
 ## v0.0.4
 
  - rename `handler` to `locate` to reflect its purpose and make it as an open api
