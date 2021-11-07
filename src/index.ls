@@ -37,7 +37,7 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
     # reinsert dom ( up to probe-len, to keep dom small and performant )
     for i from 0 til @childNodes.length =>
       if @childNodes[i].parentNode => @childNodes[i].parentNode.removeChild @childNodes[i]
-    len = probe-len or @childNodes.length
+    len = (probe-len or @childNodes.length) <? @childNodes.length
     for i from 0 til len => if !@childNodes[i].parentNode => @root.insertBefore @childNodes[i], @ph.1
 
     # update layout and get box, after dom is prepared.

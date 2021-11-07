@@ -52,7 +52,7 @@
         this.childNodes[i].parentNode.removeChild(this.childNodes[i]);
       }
     }
-    len = probeLen || this.childNodes.length;
+    len = (ref$ = probeLen || this.childNodes.length) < (ref1$ = this.childNodes.length) ? ref$ : ref1$;
     for (i$ = 0; i$ < len; ++i$) {
       i = i$;
       if (!this.childNodes[i].parentNode) {

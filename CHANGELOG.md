@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.0.6
+
+ - bug fix: probe-len should not be longer than childNodes.length 
+
+
 ## v0.0.5
 
  - support `setChild` for directly update content via innerHTML
