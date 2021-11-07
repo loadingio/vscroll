@@ -40,11 +40,13 @@ Please note that:
  - we expect the container ( root parameter ) is limited in height and scrollable.
  - we expect nodes to be visible when calling `update`, otherwise we can't correctly calcualte its diemsion.
 
-Also, `update` may still take a long time if there are many children, since `update` scan all children to determine line height and row count. Even a simple `getBoundingClientRect` takes quite long. Thus, pass an optional `probe-len` option to limit the size of test set of children:
+Also, `update` may still take a long time if there are many children since it scans all children to determine line height and row count. Even a simple `getBoundingClientRect` takes quite long.
+
+Thus, pass an optional `probe-len` option to limit the size of test set of children:
 
     vs.update(30);
 
-`probe-len` should at least larger than the count of child in a row.
+`probe-len` should at least larger than the count of child in a row, but may need a longer length if children's position may be different ( e.g., in a flexbox ) when there are not enough amount of children.
 
 
 You can always re-calculate the content to be shown by calling `locate()`:
