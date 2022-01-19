@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.0.8
+
+ - release with compact directory structure
+
+
 ## v0.0.7
 
  - fix `main` field and add `browser` field in `package.json`

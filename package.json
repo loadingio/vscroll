@@ -1,6 +1,6 @@
 {
   "name": "@loadingio/vscroll",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "browser": "dist/index.min.js",
   "main": "dist/index.min.js",
@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@zbryikt/template": "^2.3.33",
-    "fedep": "^1.0.1",
+    "fedep": "^1.1.0",
     "ldview": "^0.2.8"
   },
   "frontendDependencies": {
