@@ -2,7 +2,8 @@
   "name": "@loadingio/vscroll",
   "version": "0.0.6",
   "description": "",
-  "main": "index.js",
+  "browser": "dist/index.min.js",
+  "main": "dist/index.min.js",
   "files": ["dist/**/*"],
   "scripts": {
     "start": "npx server -r web -o true"
@@ -11,9 +12,9 @@
   "author": "zbryikt",
   "license": "MIT",
   "dependencies": {
-    "@zbryikt/template": "^2.3.22",
-    "fedep": "0.0.16",
-    "ldview": "^0.2.4"
+    "@zbryikt/template": "^2.3.33",
+    "fedep": "^1.0.1",
+    "ldview": "^0.2.8"
   },
   "frontendDependencies": {
     "root": "web/static/assets/lib",

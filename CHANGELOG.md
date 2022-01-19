@@ -1,5 +1,12 @@
 # Change Logs
 
+## v0.0.7 (upcoming)
+
+ - fix `main` field and add `browser` field in `package.json`
+ - minimize minimized file further with mangling and compression
+ - upgrade modules
+
+
 ## v0.0.6
 
  - bug fix: probe-len should not be longer than childNodes.length 
