@@ -1,6 +1,6 @@
 # Change Logs
 
-## v0.0.7 (upcoming)
+## v0.0.7
 
  - fix `main` field and add `browser` field in `package.json`
  - minimize minimized file further with mangling and compression
