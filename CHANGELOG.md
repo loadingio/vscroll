@@ -1,5 +1,12 @@
 # Change Logs
 
+## v0.0.9
+
+ - fix bug: entry is not shown if there is only one entry.
+   - when initing, range may be the same with min / max so we have to ensure the range doesn't go beyond min max
+ - upgrade dependencies to fix vulnerabilities
+
+
 ## v0.0.8
 
  - release with compact directory structure

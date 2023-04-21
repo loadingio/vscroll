@@ -89,10 +89,16 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
         if j > max => max = j
     if root.scrollTop > root.scrollHeight / 2 and min == len and max == -1 =>
       [min, max] = [delta * Math.floor(len / delta), len - 1]
-    for i from (range.0 >? 0) til min => if nodes[i].parentNode => nodes[i].parentNode.removeChild nodes[i]
-    for i from range.0 - 1 to min by -1 => if !nodes[i].parentNode => root.insertBefore nodes[i], ph.0.nextSibling
-    for i from range.1 til max by -1 => if nodes[i].parentNode => nodes[i].parentNode.removeChild nodes[i]
-    for i from range.1 + 1 to max => if !nodes[i].parentNode => root.insertBefore nodes[i], ph.1
+    for i from (range.0 >? 0) til min =>
+      if nodes[i].parentNode => nodes[i].parentNode.removeChild nodes[i]
+    # ensure range.0 is greater than/equal to min so the entry at min will be inserted
+    for i from (range.0 - 1 >? min) to min by -1 =>
+      if !nodes[i].parentNode => root.insertBefore nodes[i], ph.0.nextSibling
+    for i from range.1 til max by -1 =>
+      if nodes[i].parentNode => nodes[i].parentNode.removeChild nodes[i]
+    # ensure range.1 is smaller than/equal to max so the entry at min will be inserted
+    for i from (range.1 + 1 <? max) to max =>
+      if !nodes[i].parentNode => root.insertBefore nodes[i], ph.1
     @range = [min, max]
     ph.0.style.height = "#{lh * ((min/count) >? 0)}px"
     ph.1.style.height = "#{lh * Math.floor((len - max - 1) / count)}px"

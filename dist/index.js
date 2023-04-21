@@ -136,7 +136,7 @@
         nodes[i].parentNode.removeChild(nodes[i]);
       }
     }
-    for (i$ = range[0] - 1; i$ >= min; --i$) {
+    for (i$ = (ref$ = range[0] - 1) > min ? ref$ : min; i$ >= min; --i$) {
       i = i$;
       if (!nodes[i].parentNode) {
         root.insertBefore(nodes[i], ph[0].nextSibling);
@@ -148,7 +148,7 @@
         nodes[i].parentNode.removeChild(nodes[i]);
       }
     }
-    for (i$ = range[1] + 1; i$ <= max; ++i$) {
+    for (i$ = (ref$ = range[1] + 1) < max ? ref$ : max; i$ <= max; ++i$) {
       i = i$;
       if (!nodes[i].parentNode) {
         root.insertBefore(nodes[i], ph[1]);
