@@ -113,7 +113,6 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
     if !~(idx = @childNodes.indexOf n) => return
     @childNodes.splice idx, 1
 
-
 vscroll.dummy = (opt = {}) ->
   @root = opt.root
   @childNodes = []
