@@ -98,7 +98,7 @@
     }
     return this.locate();
   }, ref$.locate = function(){
-    var ref$, len, delta, count, nodes, lh, root, ph, rbox, range, min, max, i$, i, j, ref1$, b1, b2;
+    var ref$, len, delta, count, nodes, lh, root, ph, rbox, range, min, max, i$, i, j, ref1$, b1, b2, ref2$;
     ref$ = [this.childNodes.length, this.delta, this.count, this.childNodes, this.lineHeight, this.root, this.ph, this.rbox, this.range], len = ref$[0], delta = ref$[1], count = ref$[2], nodes = ref$[3], lh = ref$[4], root = ref$[5], ph = ref$[6], rbox = ref$[7], range = ref$[8];
     if (!ph[0].parentNode) {
       root.insertBefore(ph[0], root.childNodes[0]);
@@ -136,13 +136,13 @@
         nodes[i].parentNode.removeChild(nodes[i]);
       }
     }
-    for (i$ = (ref$ = range[0] - 1) > min ? ref$ : min; i$ >= min; --i$) {
+    for (i$ = (ref$ = (ref2$ = range[0] - 1) > min ? ref2$ : min) < (ref1$ = nodes.length - 1) ? ref$ : ref1$; i$ >= min; --i$) {
       i = i$;
       if (!nodes[i].parentNode) {
         root.insertBefore(nodes[i], ph[0].nextSibling);
       }
     }
-    for (i$ = range[1]; i$ > max; --i$) {
+    for (i$ = (ref$ = range[1]) < (ref1$ = nodes.length - 1) ? ref$ : ref1$; i$ > max; --i$) {
       i = i$;
       if (nodes[i].parentNode) {
         nodes[i].parentNode.removeChild(nodes[i]);

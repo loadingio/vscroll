@@ -1,5 +1,11 @@
 # Change Logs
 
+## v0.0.11
+
+ - fix bug: boundary of loop for inserting nodes in locate may be out of nodes array's range.
+   - additional rules applied that were missing in v0.0.10
+
+
 ## v0.0.10
 
  - fix bug: boundary of loop for inserting nodes in locate may be out of nodes array's range.
