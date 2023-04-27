@@ -97,7 +97,7 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
     for i from range.1 til max by -1 =>
       if nodes[i].parentNode => nodes[i].parentNode.removeChild nodes[i]
     # ensure range.1 is smaller than/equal to max so the entry at min will be inserted
-    for i from (range.1 + 1 <? max) to max =>
+    for i from (range.1 + 1 <? max) >? 0 to max =>
       if !nodes[i].parentNode => root.insertBefore nodes[i], ph.1
     @range = [min, max]
     ph.0.style.height = "#{lh * ((min/count) >? 0)}px"

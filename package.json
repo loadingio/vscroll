@@ -1,6 +1,6 @@
 {
   "name": "@loadingio/vscroll",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "",
   "browser": "dist/index.min.js",
   "main": "dist/index.min.js",

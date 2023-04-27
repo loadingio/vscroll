@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.0.10
+
+ - fix bug: boundary of loop for inserting nodes in locate may be out of nodes array's range.
+
+
 ## v0.0.9
 
  - fix bug: entry is not shown if there is only one entry.

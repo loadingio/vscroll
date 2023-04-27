@@ -148,7 +148,7 @@
         nodes[i].parentNode.removeChild(nodes[i]);
       }
     }
-    for (i$ = (ref$ = range[1] + 1) < max ? ref$ : max; i$ <= max; ++i$) {
+    for (i$ = (ref$ = (ref1$ = range[1] + 1) < max ? ref1$ : max) > 0 ? ref$ : 0; i$ <= max; ++i$) {
       i = i$;
       if (!nodes[i].parentNode) {
         root.insertBefore(nodes[i], ph[1]);
