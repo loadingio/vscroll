@@ -39,13 +39,15 @@
       return this.root.appendChild(this.ph[1]);
     }
   }, ref$.update = function(probeLen){
-    var ref$, ref1$, i$, to$, i, len, rbox, y, box;
+    var ref$, ref1$, savedScroll, focused, i$, to$, i, len, rbox, y, box;
     probeLen == null && (probeLen = 0);
     this.range = [1, 0];
     this.row = 1;
     this.count = 1;
     this.range[0] = (ref$ = this.range[0]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
     this.range[1] = (ref$ = this.range[1]) < (ref1$ = this.childNodes.length - 1) ? ref$ : ref1$;
+    savedScroll = this.root.scrollTop;
+    focused = document.activeElement;
     for (i$ = 0, to$ = this.childNodes.length; i$ < to$; ++i$) {
       i = i$;
       if (this.childNodes[i].parentNode) {
@@ -96,7 +98,12 @@
       i = i$;
       this.childNodes[i].parentNode.removeChild(this.childNodes[i]);
     }
-    return this.locate();
+    this.ph[0].style.height = (savedScroll + this.rbox.height) + "px";
+    this.root.scrollTop = savedScroll;
+    this.locate();
+    if (focused && this.root.contains(focused)) {
+      return focused.focus();
+    }
   }, ref$.locate = function(){
     var ref$, len, delta, count, nodes, lh, root, ph, rbox, range, min, max, i$, i, j, ref1$, b1, b2, ref2$;
     ref$ = [this.childNodes.length, this.delta, this.count, this.childNodes, this.lineHeight, this.root, this.ph, this.rbox, this.range], len = ref$[0], delta = ref$[1], count = ref$[2], nodes = ref$[3], lh = ref$[4], root = ref$[5], ph = ref$[6], rbox = ref$[7], range = ref$[8];

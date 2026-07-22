@@ -1,5 +1,16 @@
 # Change Logs
 
+## v0.0.12
+
+ - fix bug: scrollTop resets to 0 after update() when user is scrolled down
+   - root cause: Chrome scroll anchoring adjusts scrollTop during removeChild loop when items above the viewport are removed (ph0=0px case). each removal reduces scrollTop by one row height, eventually clamping it to 0.
+   - fix: save scrollTop before any DOM manipulation (moved before the removeChild loop) so scroll anchoring cannot corrupt the saved value.
+   - also set ph.0 height to savedScroll + rbox.height before restoring scrollTop, to ensure scrollHeight is large enough to avoid clamping during restore.
+ - fix bug: focused input loses focus after update()
+   - root cause: removeChild on the row containing the focused input causes the browser to blur it; reinserting the row does not restore focus.
+   - fix: save document.activeElement before DOM manipulation; restore focus after locate() if the element is still contained within root.
+
+
 ## v0.0.11
 
  - fix bug: boundary of loop for inserting nodes in locate may be out of nodes array's range.

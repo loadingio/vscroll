@@ -29,11 +29,13 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
     # when the list is long.
 
     # always clear and reset values so re-update won't mess up things.
-    # however, this doesn't preserve scrollTop.
-    # TODO we may want to support scrollTop preservation after update.
     @ <<< range: [1, 0], row: 1, count: 1
     @range.0 = @range.0 <? @childNodes.length - 1
     @range.1 = @range.1 <? @childNodes.length - 1
+    # save scrollTop and focus before any DOM change
+    # (scroll anchoring can alter scrollTop during removeChild; removeChild also blurs focused element)
+    saved-scroll = @root.scrollTop
+    focused = document.activeElement
     # reinsert dom ( up to probe-len, to keep dom small and performant )
     for i from 0 til @childNodes.length =>
       if @childNodes[i].parentNode => @childNodes[i].parentNode.removeChild @childNodes[i]
@@ -71,7 +73,10 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
 
     # clean and restore dom for locate
     for i from 0 til len => @childNodes[i].parentNode.removeChild @childNodes[i]
+    @ph.0.style.height = "#{saved-scroll + @rbox.height}px"
+    @root.scrollTop = saved-scroll
     @locate!
+    if focused and @root.contains focused => focused.focus!
 
   locate: ->
     [len, delta, count, nodes, lh, root, ph, rbox, range] = [
