@@ -1,5 +1,15 @@
 # Change Logs
 
+## v0.0.13
+
+ - fix bug: `fixed.removeChild` left the removed node in the real DOM.
+   - root cause: it only spliced the virtual `childNodes`; `update()`/`locate()`
+     reconcile only nodes still in that array, so a dropped node that happened to
+     be rendered was orphaned in `root` and stayed visible. This broke filtering
+     of any ld-each hosted by `vscroll.fixed` (e.g. @xlfont/choose search).
+   - fix: detach the node from the DOM in `removeChild`, matching `dummy`.
+   - test: `web/src/pug/test/` ( filter 300 rows to evens; asserts no orphans ).
+
 ## v0.0.12
 
  - fix bug: scrollTop resets to 0 after update() when user is scrolled down

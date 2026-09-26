@@ -117,6 +117,9 @@ vscroll.fixed.prototype = Object.create(Object.prototype) <<<
   removeChild: (n) ->
     if !~(idx = @childNodes.indexOf n) => return
     @childNodes.splice idx, 1
+    # update!/locate! only reconcile nodes still in @childNodes, so a dropped node
+    # that happens to be rendered would be orphaned in @root. detach it here.
+    if n.parentNode => n.parentNode.removeChild n
 
 vscroll.dummy = (opt = {}) ->
   @root = opt.root

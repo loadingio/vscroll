@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title vscroll.fixed removeChild test
+    style.
+      body{font-family:system-ui,sans-serif;margin:1.5em;line-height:1.6;color:#222;max-width:640px}
+      #list{width:320px;height:220px;overflow-y:scroll;border:1px solid #ccc;display:grid;grid-template-columns:1fr;gap:2px;padding:4px}
+      .row{background:#69f;color:#fff;padding:6px 8px;border-radius:3px}
+      button{margin:.2em 0 1em;padding:.4em .9em}
+      .cap{font-size:12px;color:#777;margin:.6em 0 .2em}
+      #result{margin:1em 0;white-space:pre-wrap;font-family:monospace;font-size:13px;padding:.8em;border-radius:4px;background:#f4f4f4}
+      .pass{color:#0a7d16}.fail{color:#c00}
+  body
+    h3 vscroll.fixed — does removeChild detach the real DOM node?
+    p.
+      This is an assertion, not a playground. It builds 300 virtualized rows, then
+      "filters" to the even-numbered rows by calling #[code removeChild] on every
+      odd row + #[code update()] — the way an ld-each filter drops rows from a
+      hosted list. A dropped row must also leave the DOM.
+    #result running…
+    button#run Run again
+    .cap ↓ the list below shows the filter result: even rows only (virtualized, so it looks short)
+    #mount
+    script(src="/assets/lib/@loadingio/vscroll/dev/index.min.js")
+    script: include:lsc index.ls
