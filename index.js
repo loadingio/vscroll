@@ -178,7 +178,10 @@
     if (!~(idx = this.childNodes.indexOf(n))) {
       return;
     }
-    return this.childNodes.splice(idx, 1);
+    this.childNodes.splice(idx, 1);
+    if (n.parentNode) {
+      return n.parentNode.removeChild(n);
+    }
   }, ref$);
   vscroll.dummy = function(opt){
     opt == null && (opt = {});
