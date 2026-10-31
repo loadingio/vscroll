@@ -1,5 +1,12 @@
 # Change Logs
 
+## v0.0.14
+
+ - move `@zbryikt/template`, `fedep` and `ldview` to `devDependencies`: `dist/` requires
+   none of them ( they are for building and the demo site ). as `dependencies` they were
+   installed into every consumer, and `@zbryikt/template` hoisted its old
+   `@plotdb/srcbuild` ( 0.0.70 ) into the consumer's root `node_modules`.
+
 ## v0.0.13
 
  - fix bug: `fixed.removeChild` left the removed node in the real DOM.
